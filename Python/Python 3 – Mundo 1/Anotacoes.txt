@@ -1,0 +1,114 @@
+Aula 1 - Introdução ao mundo da programação
+
+Aula 2 - Para que serve Python? 
+
+Aula 3 - Instalando Python e o IDE
+
+Aula 4 - Primeiros comandos em Python
+
+# Desafio 1 Faça um programa que leia o nome de uma pessoa e mostre uma mensagem de boas-vindas.
+
+name = str(input('Informe seu nome:'))
+print('Olá,',name,'. Seja bem-vindo!')
+print('Olá, {}. Seja bem-vindo!'.format(name))
+
+# Desafio 2 Crie um script Python que leia o dia, o mês e o ano de nascimento de uma pessoa e mostre uma mensagem com a data formatada.
+
+dia = int(input('Informe o dia do seu nascimento:'))
+mes = int(input('Infome o mês do seu nascimento:'))
+ano = int(input('Informe o ano do seu nascimento:'))
+
+print('A data formatada do seu nascimento é igual a : {}/{}/{}'.format(dia,mes,ano))
+
+Aula 5 - Instalando o Pycharm e o QPython 3
+
+Aula 6 - Tipos primitivos
+
+int - inteiro (7)
+float - Real ou Flutuante (-7.0)
+bool - Booleano (True or False)
+str - String/Texto ('Olá!')
+
+Aula 7 - Operadores aritméticos
+
++  Adição
+-  Subtração
+*  Multiplicação
+** Potênciação
+/  Divisão
+// Divisão inteira
+%  Resto de uma Divisão ou Móduço
+=  Igual a atribuição
+== Igualdade (Operador relacional de igualdade)
+
+Orde de precedência dos operadores em uma expreção
+
+1  ()
+2  **
+3  * ou / ou // ou %
+4 + ou Subtração
+
+Aula 8 - Utilizando Módulos
+
+Sintáxe para importar um módulo completo: import bebida
+Sintáxe para importar funcionalidades específicas: from doce import pudim
+
+Exemplo: O módulo math , que é um módulo bem comum, temos as seguintes funções(dentre as muitas funções existentes nesse módulo):
+
+    ceil        - Arredondamento para cima
+    flor        - Arredondamento para baixo
+    trunc       - Truncar 
+    pow         - potencia
+    sqrt        - Raíz quadrada
+    factorial   - factorial de um número
+
+Se por acaso, no iníco de um script seja utilizado o seguinte comando: 
+
+    import math
+
+Isso signigica que estaremos importando também todas as funções existentes nesse módulo. Contudo, o ideal é que seja importado apenas as funções que de fato serão utilizadas para polpar memória.
+
+Logo, o comando passaria a ter a seguinte sintáxe:
+
+from math import ceil
+
+Aula 9 - Manipulando Texto (Manipulando Cadeias de Texto)
+
+O que é uma cadeia de Texto (cadeia de caracteres/string)? 
+Exemplo: 'Curso em Vídeo Python' ou "Curso em Vídeo Python" ou '''Curso em Vídeo Python'''
+
+O que acontece na máquina? 
+Se por acaso, atribuirmos a variável chamada frase uma cadeira de caracteres da seguinte forma: frase = 'Curso em Vídeo Python'
+Como a máquina processa essa cadeia? Cada caractere recebe um índice, incluindo os espaços em brando. Ou seja, a cadeia 'Curso em Vídeo Python' possui 21 espaços alocados na memória da máquina.
+
+Operações com Cadeias de caracteres:
+
+1. Fatiamento 
+
+2. Análise: 
+
+    len(frase) - Comprimento de uma cadeia de caracteres;
+    frase.count('o') - Contagem de uma string;
+    frase.count('o',0,13) - Contagem com fatiamento em de uma string;
+    frase.find('deo') - Mostra a posição dentro da cadeia;
+    'Curso' in frase - Nesse caso, retorna True
+
+3. Transformação:
+
+    frase.replace('Python','Android') - Substitui de forma secundária os caracteres Python por Android;
+    frase.upper() - Fica em caixa alta; 
+    frase.lower() - Fica em caixa minúsculo;
+    frase.capitalize() - Deixa apenas a primeira string em caixa alta;
+    frase.title() - Analisa quantas palavras existentes em uma cadeia, e deixa a primeira string de cada palavra em caixa alta; 
+    frase.strip() - Remove todos os espaços desnecessários no início e no fim de uma cadeia de caracteres;
+    frase.rstrip() - Remove os últimos espaços; 
+    frase.lstrip() - Remove os primeiros espaços;
+
+4. Divisão:
+
+    frase.split() - Por padrão, o split é realizado nos espaços, criando novas indexações nas Cadeias de caracteres;
+
+5. Junção:
+
+    '-'.join(frase) - Juntar strings;
+    
