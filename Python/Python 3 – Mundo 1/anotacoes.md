@@ -444,3 +444,71 @@ print(f'Ao todo, seu nome possui {len(nomecompleto) - nomecompleto.count(' ')} l
 #Quantas letras tem o primeiro nome?
 print('Seu primeiro nome é {} e possui {} letras'.format(nomefatiado[0], len(nomefatiado[0])))
 ```
+
+- Exercício 023 - Faça um progrma que leia um número de 0 a 9999 e mostre na tela cada um dos dígitos separados.
+Exemplo: 1834 | Unidade: 4 Dezena: 3 Centena:8 Milhar:1
+- Resolução:
+```
+num = int(input('Informe um número inteiro entre 0 e 9999:'))
+num_text = str(num)
+
+#Fatiando a String
+print('unidade = {}'.format(num_text[3]))
+print('dezena  = {}'.format(num_text[2]))
+print('centena = {}'.format(num_text[1]))
+print('milhar  = {}'.format(num_text[0]))
+
+#Usando matemágica
+print(f'unidade = {num // 1    % 10}')
+print(f'dezena  = {num // 10   % 10}')
+print(f'centena = {num // 100  % 10}')
+print(f'milhar  = {num // 1000 % 10}')
+```
+
+- Exercício 024 - Crie um programa que leia o nome de uma cidade e diga se ela começa ou não com o nome "Santo"
+- Resolução:
+```
+nome_cidade = str(input('Informe o nome de uma cidade: '))
+fatia_nome_cidade = nome_cidade.split()
+
+print('O nome da cidade começa com Santo?: {}'.format('Santo' in fatia_nome_cidade[0]))
+```
+
+- Exercício 025 - Crie um programa que leia o nome de uma pessoa e diga se ela tem "SILVA" no nome
+- Resolução:
+```
+nome = str(input('Informe seu nome completo:'))
+
+print('Você tem silva no nome? {}'.format('Silva' in nome))
+```
+
+- Exercício 026 - Faça um programa que leia uma frase pelo teclado e mostre quantas vezes aparece a letra “A”, 
+em que posição ela aparece a primeira vez e em que posição ela aparece a última vez.
+- Resolução:
+```
+frase = str(input('Informe uma frase qualquer:')).upper()
+
+print('A frase informada foi: {}'.format(frase))
+print('A letra "A" aparece {} vez(es)'.format(frase.count('A')))
+print('A letra "A" aparece pela primeira vez na posição {}'.format(frase.find('A')+1))
+print('A letra "A" aparece pela última vez na posição {}'.format(frase.rfind('A')+1))
+
+#Sem rfind('A')
+primeiroA = frase.find('A') + 1
+ultimoA = len(frase) - frase[::-1].find('A')
+
+print(f'{primeiroA}')
+print(f'{ultimoA}')
+```
+
+- Exercício 027 - Faça um programa que leia o nome completo de uma pessoa, mostrando em seguida o primeiro e o último nome separadamente.
+- Resolução:
+```
+nome = str(input('Informe o seu nome completo:')).upper().split()
+
+primeironome = nome[0]
+ultimonome = nome[len(nome) -1 ]
+
+print(f'Primeiro nome: {primeironome}')
+print(f'Último nome: {ultimonome}')
+```
